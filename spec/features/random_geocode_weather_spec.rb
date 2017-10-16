@@ -5,27 +5,26 @@ RSpec.describe "Weather feature spec", type: :feature do
     stub_request(:get, /lon=/).and_return(
       status: 200,
       body:
-				'{
-					"coord": {
-							"lon": 24.95,
-							"lat": 60.18
-					},
-					"weather": [
-							{
-									"id": 802,
-									"description": "scattered clouds"
-							}
-					],
-					"main": {
-							"temp": 14,
-							"pressure": 1004,
-							"humidity": 82
-					},
-					"sys": {
-							"country": "FI"
-					}
-				}'
-		)
+        '{
+          "coord": {
+            "lon": 24.95,
+            "lat": 60.18
+          },
+          "weather": [
+            {
+              "id": 802,
+              "description": "scattered clouds"
+            }
+          ],
+          "main": {
+            "temp": 14,
+            "pressure": 1004,
+            "humidity": 82
+          },
+          "sys": {
+            "country": "FI"
+          }
+        }')
 
     stub_request(:get, /q=/).and_return( status: 404 )
   end
