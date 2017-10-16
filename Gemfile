@@ -18,6 +18,7 @@ gem "uglifier", ">= 1.3.0"
 # gem "therubyracer", platforms: :ruby
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.beta'
+gem "countries", require: "countries/global"
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem "turbolinks", "~> 5"
@@ -35,6 +36,7 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "pry"
   gem "dotenv-rails"
+  gem "rspec-rails", "~> 3.6"
 end
 
 group :development do
