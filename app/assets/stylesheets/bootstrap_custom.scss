@@ -1,1 +1,10 @@
-@import "bootstrap"
+@import "bootstrap";
+
+.container {
+  max-width: 730px;
+}
+
+.container hr {
+  margin: 2px 0;
+  margin-bottom:20px;
+}
