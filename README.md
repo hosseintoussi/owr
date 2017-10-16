@@ -1,24 +1,21 @@
-# README
+# What is this app about:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This rails app is a visualization of an API client gem for OpenWeatherMap.
 
-Things you may want to cover:
+The link to the API client Gem: https://github.com/hosseintoussi/owa
 
-* Ruby version
+Also this project is hosted on Heroku: https://blooming-dusk-22771.herokuapp.com/
 
-* System dependencies
+# To get started on this project:
 
-* Configuration
+- Clone the repository
+- Run a bundle install
+- run `cp .env.development.example .env.development`, and update the API key
+- Start your rails app
 
-* Database creation
+PS: This project does not have activerecord in it as there is really not a need for a database at this point.
 
-* Database initialization
+# Things To-Do to make this app better:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- An autocomplete dropdown for the list of countries
+- Map visualization for the location that the weather is displayed
