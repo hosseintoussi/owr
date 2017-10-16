@@ -1,5 +1,9 @@
 class WeatherService
-  delegate :by_city, to: :current
+  def by_city(city, country=nil)
+    Rails.cache.fetch("#{city}-#{country}", expires_in: 5.minutes) do
+      current.by_city(city, country)
+    end
+  end
 
   def by_random_geocode(longitude=nil, latitude=nil)
     lon = longitude || random_lon
