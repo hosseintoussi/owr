@@ -38,6 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
     autoprefixer-rails (7.1.5)
       execjs
@@ -48,6 +50,14 @@ GEM
       sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.1.0)
+    capybara (2.15.4)
+      addressable
+      mini_mime (>= 0.1.3)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    cliver (0.3.2)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     countries (2.1.2)
@@ -55,6 +65,8 @@ GEM
       money (~> 6.9)
       sixarm_ruby_unaccent (~> 1.1)
       unicode_utils (~> 1.4)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     crass (1.0.2)
     diff-lcs (1.3)
     dotenv (2.2.1)
@@ -68,6 +80,7 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    hashdiff (0.3.7)
     i18n (0.8.6)
     i18n_data (0.8.0)
     jbuilder (2.7.0)
@@ -90,6 +103,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_mime (0.1.4)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     money (6.9.0)
@@ -101,10 +115,15 @@ GEM
       mini_portile2 (~> 2.3.0)
     owa (0.1.0)
       faraday
+    poltergeist (1.14.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      websocket-driver (>= 0.2.0)
     popper_js (1.11.1)
     pry (0.11.1)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
     rack-test (0.7.0)
@@ -154,6 +173,7 @@ GEM
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
     ruby_dep (1.5.0)
+    safe_yaml (1.0.4)
     sass (3.5.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -194,9 +214,15 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webmock (3.1.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    xpath (2.1.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -204,12 +230,14 @@ PLATFORMS
 DEPENDENCIES
   bootstrap (~> 4.0.0.beta)
   byebug
+  capybara
   countries
   dotenv-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   owa
+  poltergeist
   pry
   puma (~> 3.7)
   rails (~> 5.1.4)
@@ -221,6 +249,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  webmock
 
 BUNDLED WITH
    1.14.6

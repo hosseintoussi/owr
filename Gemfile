@@ -37,6 +37,9 @@ group :development, :test do
   gem "pry"
   gem "dotenv-rails"
   gem "rspec-rails", "~> 3.6"
+  gem "capybara"
+  gem "poltergeist"
+  gem "webmock"
 end
 
 group :development do
