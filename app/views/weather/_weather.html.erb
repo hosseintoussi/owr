@@ -1,0 +1,35 @@
+<% return unless weather %>
+<%= content_tag(:i, nil, class: weather.icon_class)%>
+<table class="table table-striped table-sm">
+  <tbody>
+    <% if weather.country.present? %>
+      <tr>
+        <td>Country</td>
+        <td><%= content_tag(:div, weather.country)%></td>
+      </tr>
+    <% end %>
+    <% if weather.city.present? %>
+      <tr>
+        <td>City</td>
+        <td><%= content_tag(:div, weather.city)%></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td>Description</td>
+      <td><%= content_tag(:div, weather.description)%></td>
+    </tr>
+    <tr>
+      <td>Temp</td>
+      <td><%= content_tag(:div, weather.temp)%></td>
+    </tr>
+    <tr>
+      <td>Humidity</td>
+      <td><%= content_tag(:div, weather.humidity)%></td>
+    </tr>
+    <tr>
+      <td>Geocode</td>
+      <td><%= content_tag(:div, weather.geocode)%></td>
+    </tr>
+  </tbody>
+</table>
+

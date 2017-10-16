@@ -1,0 +1,12 @@
+<div class="form-place">
+  <%= form_tag("/search", method: "get", class: "form-inline justify-content-center") do %>
+    <%= text_field_tag(:city, nil, class: "form-control my-2 mr-sm-2",
+          placeholder: "City", required: true) %>
+
+    <%= collection_select(:country, :name, countries, :first,
+          :last, { prompt: "Country (Optional)" },
+          { class: "form-control my-2 mr-sm-2" }) %>
+
+    <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
+  <% end %>
+</div>
