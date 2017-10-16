@@ -9,7 +9,7 @@ class WeatherController < ApplicationController
   def search
     begin
       weather = WeatherService
-        .new.by_city(params["city"], params["country"]["name"])
+        .new.by_city(city, country)
 
       @weather = WeatherPresenter.new(weather)
     rescue Owa::OwaErrors => e
@@ -23,5 +23,13 @@ class WeatherController < ApplicationController
 
   def set_countries
     @countries = CountriesService.translations
+  end
+
+  def city
+    params["city"]
+  end
+
+  def country
+    params["country"].try(:[], "name")
   end
 end
