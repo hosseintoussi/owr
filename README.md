@@ -17,5 +17,6 @@ PS: This project does not have activerecord in it as there is really not a need 
 
 ## Things To-Do to make this app better:
 
+- Increasing the test coverage 
 - An autocomplete dropdown for the list of countries
 - Map visualization for the location that the weather is displayed
